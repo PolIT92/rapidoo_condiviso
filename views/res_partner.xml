@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="rapidoo_condiviso_res_partner_form" model="ir.ui.view">
+        <field name="name">rapidoo_condiviso_res_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="ultima_vendita" />
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
